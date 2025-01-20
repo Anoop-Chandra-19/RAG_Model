@@ -6,7 +6,7 @@ class Generator:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(model_name)
 
-    def generate_response(self, query, retrieved_chunks):
+    def generate_response(self, query, retrieved_chunks, max_length=200):
         # Combine retrieved chunks into a single context
         context = "\n".join([chunk["chunk"] for chunk in retrieved_chunks])
         prompt = f"Context:\n{context}\n\nQuestion:\n{query}\n\nAnswer:"
