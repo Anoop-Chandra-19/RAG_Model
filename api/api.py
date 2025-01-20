@@ -9,7 +9,7 @@ retriever = Retriever(
     embeddings_path="data/embeddings_local.npy", 
     docs_path="data/preprocessed_docs_local.json"
 )
-generator = Generator(api_key="your_openai_api_key_here")
+generator = Generator(model_name="gpt2")
 
 @app.post("/retrieve")
 def retrieve_docs(query: str, top_k: int = 5):
