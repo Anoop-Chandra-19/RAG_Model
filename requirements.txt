@@ -2,7 +2,7 @@ fastapi
 uvicorn
 torch
 sentence-transformers
-openai
+transformers
 numpy
 streamlit
 requests
